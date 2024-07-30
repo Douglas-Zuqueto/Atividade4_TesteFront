@@ -25,4 +25,9 @@ context('Wuxia Tests', () => {
         cy.get('strong').contains('A Record of a Mortal’s Journey to Immortality').click({force:true}) // selecionar primeiro resultado dos parametros
         cy.get('a > .font-set-b16').click() // começar a ler
     })
+
+    it('Pesquisa por Novel', () => { // Teste de pesquisa por novel específica
+        cy.get('[placeholder="Search"]').type('Overgeared').wait(1000).type('{Enter}');
+        // Pesquisa da novel realizada com sucesso, mas só apertando Enter após esperar 1000ms
+    })
 })
